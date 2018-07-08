@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12 mobile-header">
+        <h1>Pick a city</h1>
+      </div>
+    </div>
+    <!--<div id="bg-img-slideshow"></div>-->
+    <div class="row">
+      <p id="cityChosen"></p>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-offset-3 col-md-6 button-div">
+        <button type="button" id="londonButton" onclick="londonFunction()">London</button>
+        <button type="button" id="parisButton" onclick="parisFunction()">Paris</button>
+        <button type="button" id="romeButton" onclick="romeFunction()">Rome</button>
+        <button type="button" id="berlinButton" onclick="berlinFunction()">Berlin</button>
+        <button type="button" id="amsterdamButton" onclick="amsterdamFunction()">Amsterdam</button>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-8 col-offset-md-3 col-sm-12 map-div">
+        <div id="map"></div>
+      </div>
+
+      <div class="col-md-2 col-sm-12 key">
+        <h1>Key</h1>
+        <div class="row key-styles">
+          <img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png">
+          <p>Attractions</p>
+        </div>
+        <div class="row key-styles">
+          <img src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png">
+          <p>Hotels</p>
+        </div>
+        <div class="row key-styles">
+          <img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png">
+          <p>Bars and Restaurants</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $('button').one('click', function() {
+      $('.key').show();
+      $('.mobile-header > h1').remove();
+
+    });
+    
+    
+
+
+
+    // //background slideshow jquery
+    // $(document).ready(function() {
+
+    //   var counter = 0;
+    //   var backgroundImages = [
+    //     ".c9/slideshow-images/london-2.jpg",
+    //     ".c9/slideshow-images/amsterdam-1-new.jpg",
+    //     ".c9/slideshow-images/paris-2.jpg",
+    //     ".c9/slideshow-images/rome-1-new.jpg",
+    //     ".c9/slideshow-images/amsterdam-2-new.jpg",
+    //     ".c9/slideshow-images/berlin-new.jpg",
+    //     ".c9/slideshow-images/rome-2-new.jpg"
+    //   ];
+    //   var backgroundImage = $("#bg-img-slideshow");
+
+    //   backgroundImage.css("background-image", "url(" + backgroundImages[counter] + ")");
+
+    //   setInterval(function() {
+    //     backgroundImage.fadeOut(2000, function() {
+    //       backgroundImage.css("background-image", "url(" + backgroundImages[counter++] + ")");
+    //       backgroundImage.fadeIn(2000);
+    //     });
+
+    //     if (counter == backgroundImages.length) {
+    //       counter = 0;
+    //     }
+    //   }, 8000);
+
+    // });
+  </script>
+  <script>
+    //key 
+    function keyFunction() {
+      document.getElementById("")
+    }
+
+
+
+    //map js
+    function londonFunction() {
+
+      document.getElementById("cityChosen").innerHTML = "Welcome to London"
+      var londonAttractions = [
+        { lat: 51.5007, lng: -0.1246, content: "Big Ben" },
+        { lat: 51.5033, lng: -0.1195, content: "London Eye" },
+        { lat: 51.501404, lng: -0.141890, content: "Buckingham Palace" },
+        { lat: 51.5138, lng: -0.0984, content: "St Paul's Cathedral" }
+      ];
+
+
+
+      var londonHotels = [
+        { lat: 51.507326, lng: -0.124714, content: "Citadines Trafalgar Square", url: "https://www.citadines.com/en/united-kingdom/london/citadines-trafalgar-square-london/index.html" },
+        { lat: 51.504327, lng: -0.118216, content: "Premier Inn London County Hall", url: "https://www.premierinn.com/gb/en/hotels/england/greater-london/london/london-county-hall.html" },
+        { lat: 51.513201, lng: -0.099660, content: "Grange St Paul's Hotel", url: "https://www.grangehotels.com/hotels-london/grange-st-pauls/" },
+        { lat: 51.496445, lng: -0.170298, content: "The Rembrandt Hotel", url: "https://www.sarova-rembrandthotel.com/" }
+
+      ];
+
+      var londonBarsRestaurants = [
+        { lat: 51.501954, lng: -0.161922, content: "Buddha Bar", url: "https://www.buddhabarlondon.com/" },
+        { lat: 51.518465, lng: -0.135043, content: "Oscar Bar and Restaurant", url: "https://www.firmdalehotels.com/a/restaurants-bars/london/oscar/" },
+        { lat: 51.508516, lng: -0.108350, content: "Oxo Tower Restaurant", url: "https://www.harveynichols.com/restaurant/the-oxo-tower/" },
+        { lat: 51.515060, lng: -0.091355, content: "The Anthologist Bar and Restaurant", url: "https://www.drakeandmorgan.co.uk/the-anthologist/" }
+
+      ];
+
+      initMap(londonAttractions, londonHotels, londonBarsRestaurants)
+
+
+
+
+
+
+    }
+
+    function parisFunction() {
+
+      document.getElementById("cityChosen").innerHTML = "Bienvenue à Paris"
+      var parisAttractions = [
+        { lat: 48.858328, lng: 2.294353, content: "Eiffel Tower" },
+        { lat: 48.861204, lng: 2.335848, content: "Louvre" },
+        { lat: 48.874066, lng: 2.295001, content: "Arc de Triomph" },
+        { lat: 48.853039, lng: 2.349854, content: "Notre-Dame de Paris" },
+
+      ];
+
+      var parisHotels = [
+        { lat: 48.852986, lng: 2.344239, content: "Hôtel Europe Saint-Séverin", url: "https://www.hoteleurope.net/en/" },
+        { lat: 48.869043, lng: 2.300721, content: "Prince de Galles", url: "http://www.princedegallesparis.com/" },
+        { lat: 48.875874, lng: 2.300378, content: "Le Royal Monceau", url: "https://www.raffles.com/paris/" },
+        { lat: 48.861340, lng: 2.342625, content: "Hotel Konfidentiel Paris", url: "http://en.konfidentiel-paris.com/" }
+
+      ];
+
+      var parisBarsRestaurants = [
+        { lat: 48.860535, lng: 2.293575, content: "Bateaux Parisiens", url: "https://www.bateauxparisiens.com/en/meal-cruise.html" },
+        { lat: 48.867936, lng: 2.321362, content: "Buddha Bar", url: "https://www.buddhabar.com/en/restaurant-bar-buddha-bar-paris-20" },
+        { lat: 48.862292, lng: 2.364740, content: "Le Mary Celeste", url: "http://www.quixotic-projects.com/venue/mary-celeste" },
+        { lat: 48.863252, lng: 2.362881, content: "Candelaria", url: "http://www.quixotic-projects.com/venue/candelaria" }
+
+      ];
+
+      initMap(parisAttractions, parisHotels, parisBarsRestaurants)
+
+    }
+
+    function romeFunction() {
+
+      document.getElementById("cityChosen").innerHTML = "Benvenuti a Roma"
+      var romeAttractions = [
+        { lat: 41.890250, lng: 12.492208, content: "Colosseum" },
+        { lat: 41.902191, lng: 12.453947, content: "Basilica di San Pietro" },
+        { lat: 41.900858, lng: 12.483123, content: "Trevi Fountain" },
+        { lat: 41.906025, lng: 12.482776, content: "Spanish Steps" }
+
+      ];
+
+      var romeHotels = [
+        { lat: 41.908112, lng: 12.470999, content: "Le Meridien Visconti", url: "http://www.lemeridienviscontirome.com/" },
+        { lat: 41.904407, lng: 12.494689, content: "Hotel Mascagni", url: "http://www.hotelmascagnirome.com/" },
+        { lat: 41.900847, lng: 12.496470, content: "Hotel Impero", url: "http://www.hotelimperorome.com/" },
+        { lat: 41.903904, lng: 12.488144, content: "Barocco Hotel", url: "https://www.hotelbarocco.com/" }
+
+      ];
+
+      var romeBarsRestaurants = [
+        { lat: 41.892067, lng: 12.467944, content: "Essenza Wine Bar", url: "http://www.essenzawinebar.it/" },
+        { lat: 41.888297, lng: 12.477728, content: "Trattoria da Enzo", url: "http://www.daenzoal29.com/" },
+        { lat: 41.901012, lng: 12.493521, content: "Ristorante Ambrosia", url: "https://www.hotelartemide.it/it/ristorante-ambrosia" },
+        { lat: 41.899095, lng: 12.482363, content: "L'Antica Birreria Peroni", url: "https://www.anticabirreriaperoni.net/" }
+
+      ];
+
+      initMap(romeAttractions, romeHotels, romeBarsRestaurants)
+
+    }
+
+
+    function berlinFunction() {
+
+      document.getElementById("cityChosen").innerHTML = "Willkommen in Berlin"
+
+      var berlinAttractions = [
+        { lat: 52.518640, lng: 13.376187, content: "Reichstag Building" },
+        { lat: 52.516267, lng: 13.377689, content: "Brandenburg Gate" },
+        { lat: 52.535135, lng: 13.390169, content: "Berlin Wall Memorial" },
+        { lat: 52.521925, lng: 13.413225, content: "Alexander Platz" }
+
+      ];
+
+      var berlinHotels = [
+        { lat: 52.521548, lng: 13.388260, content: "Meliá Berlin", url: "https://www.melia.com/en/hotels/germany/berlin/melia-berlin/index.html" },
+        { lat: 52.517043, lng: 13.380492, content: "Hotel Adlon Kempinski", url: "https://www.kempinski.com/en/berlin/hotel-adlon/" },
+        { lat: 52.510044, lng: 13.345817, content: "SO Berlin Das Stue", url: "https://www.accorhotels.com/gb/hotel-B1Y6-so-berlin-das-stue/index.shtml" },
+        { lat: 52.529577, lng: 13.384011, content: "H + Hotel Berlin Mitte", url: "https://www.h-hotels.com/de/hplus/hotels/hplus-hotel-berlin-mitte" }
+
+      ];
+
+      var berlinBarsRestaurants = [
+        { lat: 52.521062, lng: 13.384870, content: "Tausend", url: "http://tausendberlin.com/" },
+        { lat: 52.524091, lng: 13.367875, content: "N° 5 Restaurant", url: "https://www.steigenberger.com/en/hotels/all-hotels/germany/berlin/steigenberger-hotel-am-kanzleramt/restaurants-bars" },
+        { lat: 52.512758, lng: 13.409760, content: "Upside Down", url: "http://www.upsidedownbar.com/" },
+        { lat: 52.522890, lng: 13.388646, content: "Grill Royal", url: "http://grillroyal.com/en/" }
+
+      ];
+
+      initMap(berlinAttractions, berlinHotels, berlinBarsRestaurants)
+    }
+
+    function amsterdamFunction() {
+
+      document.getElementById("cityChosen").innerHTML = "Welkom in Amsterdam"
+
+      var amsterdamAttractions = [
+        { lat: 52.374206, lng: 4.883971, content: "Anne Frank House" },
+        { lat: 52.360011, lng: 4.885197, content: "Rijks museum" },
+        { lat: 52.358436, lng: 4.881065, content: "Van Gogh Museum" },
+        { lat: 52.357746, lng: 4.868487, content: "Vondel Park" }
+
+      ];
+
+      var amsterdamHotels = [
+        { lat: 52.378241, lng: 4.894636, content: "Renaissance Amsterdam Hotel", url: "https://www.marriott.com/hotels/travel/amsrd-renaissance-amsterdam-hotel/?scid=bb1a189a-fec3-4d19-a255-54ba596febe2" },
+        { lat: 52.370381, lng: 4.896610, content: "Radisson Blu Hotel", url: "https://www.radissonblu.com/en/hotel-amsterdam?facilitatorId=CSOSEO&csref=org_gmb_sk_en_sn_ho_AMSZH" },
+        { lat: 52.376040, lng: 4.885881, content: "The Toren", url: "https://www.thetoren.nl/?utm_source=GoogleBusiness&utm_campaign=source_directsearch" },
+        { lat: 52.374573, lng: 4.904077, content: "Grand Hotel Amrâth", url: "https://www.amrathamsterdam.com/en/index.html" }
+
+      ];
+
+      var amsterdamBarsRestaurants = [
+        { lat: 52.361731, lng: 4.882448, content: "MOMO", url: "http://www.momo-amsterdam.com/" },
+        { lat: 52.368020, lng: 4.883048, content: "Bluespoon Restaurant", url: "https://bluespoon-restaurant.nl/" },
+        { lat: 52.358848, lng: 4.878671, content: "Tunes Bar", url: "https://www.conservatoriumhotel.com/tunes-bar" },
+        { lat: 52.367391, lng: 4.888370, content: "Herengracht", url: "https://www.deherengracht.com/" }
+
+      ];
+
+      initMap(amsterdamAttractions, amsterdamHotels, amsterdamBarsRestaurants)
+    }
+
+
+
+    function initMap(attractions, hotels, barsRestaurants) {
+
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: attractions[0]
+
+
+      });
+
+      attractions.map(function(attraction, i) {
+        console.log(attraction["content"])
+
+        var infoWindow = new google.maps.InfoWindow({
+          content: "<h4>" + attraction["content"] + "</h4>"
+        });
+
+        var lat = attraction["lat"];
+        var lng = attraction["lng"];
+
+        var marker = new google.maps.Marker({
+          position: { lat, lng },
+          map: map,
+          icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
+
+        });
+
+        marker.addListener('click', function() {
+          infoWindow.open(map, marker);
+
+        });
+      });
+
+
+
+      hotels.map(function(hotel, i) {
+
+        var infoWindow = new google.maps.InfoWindow({
+          content: "<h4><a href=" + hotel["url"] + " target=blank_>" + hotel["content"] + "</a></h4>"
+        });
+
+        var lat = hotel["lat"];
+        var lng = hotel["lng"];
+
+        var marker = new google.maps.Marker({
+          position: { lat, lng },
+          map: map,
+          icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+
+        });
+
+        marker.addListener('click', function() {
+          infoWindow.open(map, marker);
+        });
+
+      });
+
+      barsRestaurants.map(function(barsRestaurant, i) {
+
+        var infoWindow = new google.maps.InfoWindow({
+          content: "<h4><a href=" + barsRestaurant["url"] + " target=blank_>" + barsRestaurant["content"] + "</a></h4>"
+        });
+
+        var lat = barsRestaurant["lat"];
+        var lng = barsRestaurant["lng"];
+
+        var marker = new google.maps.Marker({
+          position: { lat, lng },
+          map: map,
+          icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+
+        });
+
+        marker.addListener('click', function() {
+          infoWindow.open(map, marker)
+        });
+
+      });
+    };
+  </script>
+
+
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw7ovVGXQckNjOhbFtRaty-5QxV8Peft8"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+@font-face {
+      font-family: Bebas-Neue-bold;
+      src: url('/.c9/bebas_neue/BebasNeue Bold.otf')format("opentype");
+}
+
+@font-face {
+      font-family: Bebas-Neue-light;
+      src: url('/.c9/bebas_neue/BebasNeue Light.otf')format("opentype");
+}
+
+@font-face {
+      font-family: Bebas-Neue-thin;
+      src: url('/.c9/bebas_neue/BebasNeue Thin.otf')format("opentype")
+}
+
+.container {
+      height: 100%;
+      width: 100%;
+      /*code taken from https://css-tricks.com/ */
+      background: url('/.c9/slideshow-images/amsterdam-1.jpg') no-repeat center center fixed;
+      /*image from http://www.petercousens.com/ */
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      align-items: center;
+      margin-bottom: 0;
+}
+
+/* Mobile header */
+
+.mobile-header {
+      font-family: Bebas-Neue-bold;
+      color: #ff572e;
+      text-align: center;
+}
+
+.mobile-header h1 {
+      font-size: 60px;
+}
+
+
+p {
+      font-family: Bebas-Neue-bold;
+      font-size: 80px;
+      color: #ff572e;
+      text-align: center;
+}
+
+
+button:focus {
+      outline: 0;
+      background-color: #ff572e;
+
+}
+
+button:hover {
+      background-color: #ff572e;
+
+}
+
+.map-div {
+      padding: 0;
+}
+
+div#map {
+      min-height: 400px;
+      max-width: 100%;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+
+}
+
+/*#bg-img-slideshow {
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      z-index: -99;
+      left: 0;
+
+}
+*/
+
+#bg-img-slideshow {
+      height: 100vh;
+      width: 100%;
+      /*code taken from https://css-tricks.com/ */
+      background: url('/.c9/slideshow-images/amsterdam-1-new.jpg') no-repeat center center fixed;
+      /*image from http://www.petercousens.com/ */
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      align-items: center;
+
+}
+
+div.key {
+      background-color: #a7ce98;
+      width: 100%;
+      opacity: 0.95;
+      display: none;
+      padding: 10px;
+      margin-top: 20px;
+}
+
+
+
+.key h1 {
+      text-align: center;
+      color: #ff572e;
+      font-family: Bebas-Neue-bold;
+}
+
+.key p {
+      font-size: 30px;
+      display: inline-block;
+      font-family: Bebas-Neue-light;
+      color: #fff;
+      letter-spacing: 2px;
+}
+
+
+.key-styles {
+      margin-bottom: 7px;
+      margin-left: -7px;
+}
+
+/* media queries */
+
+@media (min-width: 480px) {
+      .container {
+            height: 100vh;
+
+      }
+
+      .button-div {
+            text-align: center;
+            white-space: nowrap;
+      }
+      button {
+            font-family: Bebas-Neue-light;
+            background-color: #a7ce98;
+            text-decoration: none;
+            border: none;
+            padding: 7px;
+            margin-left: 24px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            padding: 8px;
+            transition: all .2s ease-in-out;
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            opacity: 0.95;
+            display: inline-block;
+      }
+
+
+
+      div#map {
+            min-height: 520px;
+            max-width: 100%;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+      }
+}
+
+@media (max-width: 480px) {
+      button {
+            font-family: Bebas-Neue-light;
+            background-color: #a7ce98;
+            text-decoration: none;
+            border: none;
+            padding: 7px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            padding: 8px;
+            transition: all .2s ease-in-out;
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            opacity: 0.95;
+            display: block;
+            width: 100%;
+            letter-spacing: 2px;
+      }
+}
+
+@media (min-width: 480px) and (max-width: 991px) {
+      div#map {
+            min-height: 520px;
+            max-width: 100%;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 50%;
+            max-width: 60%;
+
+      }
+
+      div.key {
+            background-color: #a7ce98;
+            display: none;
+            opacity: 0.95;
+            top: 15px
+      }
+      .key img {
+            margin-left: 35%;
+      }
+
+      .key p {
+            font-size: 30px;
+            display: inline;
+            font-family: Bebas-Neue-light;
+            color: #fff;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+      }
+      .key-styles {
+      margin-bottom: 7px;
+      margin-left: -7px;
+      margin-top: -16px;
+}
+
+}
+
+
+@media (min-width: 991px) {
+      .container {
+            height: 100vh;
+
+      }
+
+      button {
+            font-family: Bebas-Neue-light;
+            background-color: #a7ce98;
+            text-decoration: none;
+            border: none;
+            padding: 7px;
+            margin-left: 24px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            padding: 8px;
+            transition: all .2s ease-in-out;
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            opacity: 0.95;
+            display: inline-block;
+      }
+
+      div#map {
+            min-height: 520px;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 50%;
+            max-width: 55%;
+
+      }
+
+      div.key {
+            background-color: #a7ce98;
+            width: 22%;
+            top: 113px;
+            opacity: 0.95;
+            display: none;
+      }
+      .key img {
+            margin-left: 2%;
+      }
+}
