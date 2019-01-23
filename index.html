@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
   <link rel="stylesheet" href="styles.css" type="text/css" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Google API</title>
-
-
 </head>
-
 <body>
   <div class="container">
     <div class="row">
@@ -20,7 +15,6 @@
         <h1>Pick a city</h1>
       </div>
     </div>
-    <!--<div id="bg-img-slideshow"></div>-->
     <div class="row">
       <p id="cityChosen"></p>
     </div>
@@ -33,12 +27,10 @@
         <button type="button" id="amsterdamButton" onclick="amsterdamFunction()">Amsterdam</button>
       </div>
     </div>
-    
     <div class="row">
       <div class="col-md-8 col-offset-md-3 col-sm-12 map-div">
         <div id="map"></div>
       </div>
-
       <div class="col-md-2 col-sm-12 key">
         <h1>Key</h1>
         <div class="row key-styles">
@@ -54,7 +46,6 @@
           <p>Bars and Restaurants</p>
         </div>
       </div>
-
     </div>
   </div>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -62,7 +53,6 @@
     $('button').one('click', function() {
       $('.key').show();
       $('.mobile-header > h1').remove();
-
     });
   </script>
   <script>
@@ -77,14 +67,11 @@
         { lat: 51.5138, lng: -0.0984, content: "St Paul's Cathedral" }
       ];
 
-
-
       var londonHotels = [
         { lat: 51.507326, lng: -0.124714, content: "Citadines Trafalgar Square", url: "https://www.citadines.com/en/united-kingdom/london/citadines-trafalgar-square-london/index.html" },
         { lat: 51.504327, lng: -0.118216, content: "Premier Inn London County Hall", url: "https://www.premierinn.com/gb/en/hotels/england/greater-london/london/london-county-hall.html" },
         { lat: 51.513201, lng: -0.099660, content: "Grange St Paul's Hotel", url: "https://www.grangehotels.com/hotels-london/grange-st-pauls/" },
         { lat: 51.496445, lng: -0.170298, content: "The Rembrandt Hotel", url: "https://www.sarova-rembrandthotel.com/" }
-
       ];
 
       var londonBarsRestaurants = [
@@ -92,15 +79,9 @@
         { lat: 51.518465, lng: -0.135043, content: "Oscar Bar and Restaurant", url: "https://www.firmdalehotels.com/a/restaurants-bars/london/oscar/" },
         { lat: 51.508516, lng: -0.108350, content: "Oxo Tower Restaurant", url: "https://www.harveynichols.com/restaurant/the-oxo-tower/" },
         { lat: 51.515060, lng: -0.091355, content: "The Anthologist Bar and Restaurant", url: "https://www.drakeandmorgan.co.uk/the-anthologist/" }
-
       ];
 
       initMap(londonAttractions, londonHotels, londonBarsRestaurants)
-
-
-
-
-
 
     }
 
