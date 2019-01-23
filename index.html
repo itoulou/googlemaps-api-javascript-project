@@ -59,7 +59,7 @@
     //map js
     function londonFunction() {
 
-      document.getElementById("cityChosen").innerHTML = "Welcome to London"
+      document.getElementById("cityChosen").innerHTML = "Welcome to London";
       var londonAttractions = [
         { lat: 51.5007, lng: -0.1246, content: "Big Ben" },
         { lat: 51.5033, lng: -0.1195, content: "London Eye" },
@@ -81,13 +81,13 @@
         { lat: 51.515060, lng: -0.091355, content: "The Anthologist Bar and Restaurant", url: "https://www.drakeandmorgan.co.uk/the-anthologist/" }
       ];
 
-      initMap(londonAttractions, londonHotels, londonBarsRestaurants)
+      initMap(londonAttractions, londonHotels, londonBarsRestaurants);
 
     }
 
     function parisFunction() {
 
-      document.getElementById("cityChosen").innerHTML = "Bienvenue à Paris"
+      document.getElementById("cityChosen").innerHTML = "Bienvenue à Paris";
       var parisAttractions = [
         { lat: 48.858328, lng: 2.294353, content: "Eiffel Tower" },
         { lat: 48.861204, lng: 2.335848, content: "Louvre" },
@@ -112,13 +112,13 @@
 
       ];
 
-      initMap(parisAttractions, parisHotels, parisBarsRestaurants)
+      initMap(parisAttractions, parisHotels, parisBarsRestaurants);
 
     }
 
     function romeFunction() {
 
-      document.getElementById("cityChosen").innerHTML = "Benvenuti a Roma"
+      document.getElementById("cityChosen").innerHTML = "Benvenuti a Roma";
       var romeAttractions = [
         { lat: 41.890250, lng: 12.492208, content: "Colosseum" },
         { lat: 41.902191, lng: 12.453947, content: "Basilica di San Pietro" },
@@ -143,14 +143,14 @@
 
       ];
 
-      initMap(romeAttractions, romeHotels, romeBarsRestaurants)
+      initMap(romeAttractions, romeHotels, romeBarsRestaurants);
 
     }
 
 
     function berlinFunction() {
 
-      document.getElementById("cityChosen").innerHTML = "Willkommen in Berlin"
+      document.getElementById("cityChosen").innerHTML = "Willkommen in Berlin";
 
       var berlinAttractions = [
         { lat: 52.518640, lng: 13.376187, content: "Reichstag Building" },
@@ -176,12 +176,12 @@
 
       ];
 
-      initMap(berlinAttractions, berlinHotels, berlinBarsRestaurants)
+      initMap(berlinAttractions, berlinHotels, berlinBarsRestaurants);
     }
 
     function amsterdamFunction() {
 
-      document.getElementById("cityChosen").innerHTML = "Welkom in Amsterdam"
+      document.getElementById("cityChosen").innerHTML = "Welkom in Amsterdam";
 
       var amsterdamAttractions = [
         { lat: 52.374206, lng: 4.883971, content: "Anne Frank House" },
@@ -207,7 +207,7 @@
 
       ];
 
-      initMap(amsterdamAttractions, amsterdamHotels, amsterdamBarsRestaurants)
+      initMap(amsterdamAttractions, amsterdamHotels, amsterdamBarsRestaurants);
     }
 
 
@@ -222,7 +222,7 @@
       });
 
       attractions.map(function(attraction, i) {
-        console.log(attraction["content"])
+        console.log(attraction["content"]);
 
         var infoWindow = new google.maps.InfoWindow({
           content: "<h4>" + attraction["content"] + "</h4>"
@@ -285,10 +285,10 @@
         });
 
         marker.addListener('click', function() {
-          infoWindow.open(map, marker)
+          infoWindow.open(map, marker);
         });
       });
-    };
+    }
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw7ovVGXQckNjOhbFtRaty-5QxV8Peft8"></script>
 </body>
