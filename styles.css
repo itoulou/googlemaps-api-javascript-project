@@ -7,10 +7,11 @@
       font-family: Bebas-Neue-light;
       src: url('./bebas_neue/BebasNeue Light.otf')format("opentype");
 
+}
 
 @font-face {
       font-family: Bebas-Neue-thin;
-      src: url('./bebas_neue/BebasNeue Thin.otf')format("opentype")
+      src: url('./bebas_neue/BebasNeue Thin.otf')format("opentype");
 }
 
 .container {
@@ -72,21 +73,11 @@ div#map {
 
 }
 
-/*#bg-img-slideshow {
-      height: 100vh;
-      width: 100%;
-      position: absolute;
-      z-index: -99;
-      left: 0;
-
-}
-*/
-
 #bg-img-slideshow {
       height: 100vh;
       width: 100%;
       /*code taken from https://css-tricks.com/ */
-      background: url('./slideshow-images/amsterdam-1-new.jpg') no-repeat center center fixed;
+      background: url('./slideshow-images/amsterdam-2.jpg') no-repeat center center fixed;
       /*image from http://www.petercousens.com/ */
       -webkit-background-size: cover;
       -moz-background-size: cover;
