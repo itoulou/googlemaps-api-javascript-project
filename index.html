@@ -18,19 +18,31 @@
     <div class="row">
       <p id="cityChosen"></p>
     </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-offset-3 col-md-6 button-div">
-        <button type="button" id="londonButton" onclick="londonFunction()">London</button>
-        <button type="button" id="parisButton" onclick="parisFunction()">Paris</button>
-        <button type="button" id="romeButton" onclick="romeFunction()">Rome</button>
-        <button type="button" id="berlinButton" onclick="berlinFunction()">Berlin</button>
-        <button type="button" id="amsterdamButton" onclick="amsterdamFunction()">Amsterdam</button>
+    <div class="row button-row">
+      <div class="col-xs-12 text-center button-div">
+        <div class="col-xs-12 col-md-offset-1 col-md-2">
+          <button type="button" id="londonButton" onclick="londonFunction()">London</button>
+        </div>
+        <div class="col-xs-12 col-md-2">
+          <button type="button" id="parisButton" onclick="parisFunction()">Paris</button>
+        </div>
+        <div class="col-xs-12 col-md-2">
+          <button type="button" id="romeButton" onclick="romeFunction()">Rome</button>
+        </div>
+        <div class="col-xs-12 col-md-2">
+          <button type="button" id="berlinButton" onclick="berlinFunction()">Berlin</button>
+        </div>
+        <div class="col-xs-12 col-md-2">
+          <button type="button" id="amsterdamButton" onclick="amsterdamFunction()">Amsterdam</button>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-8 col-offset-md-3 col-sm-12 map-div">
+    <div class="row map-row">
+      <div class="col-xs-12  map-div">
         <div id="map"></div>
       </div>
+    </div>
+    <div class="row row-key">
       <div class="col-md-2 col-sm-12 key">
         <h1>Key</h1>
         <div class="row key-styles">
