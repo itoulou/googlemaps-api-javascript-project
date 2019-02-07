@@ -26,6 +26,13 @@ close to the action. Lastly if the user is a big foodie or want to experience th
 nightlife, then a variety of restaurants and bars are displayed to ensure their 
 evenings are filled with entertainment.
 
+__md/lg__
+
+![map image](/wireframes/images/google-maps-api-md-lg.png "md lg")
+
+__xs/sm__
+
+![map image](/wireframes/images/google-maps-api-xs-sm.png "xs sm")
 
 # Features
 ### London
