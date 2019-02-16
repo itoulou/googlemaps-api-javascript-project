@@ -10,6 +10,7 @@
 </head>
 <body>
   <div class="container">
+    <!----Title------>
     <div class="row">
       <div class="col-xs-12 col-md-12 mobile-header">
         <h1>Pick a city</h1>
@@ -18,6 +19,7 @@
     <div class="row">
       <p id="cityChosen"></p>
     </div>
+    <!----City Buttons------>
     <div class="row button-row">
       <div class="col-xs-12 text-center button-div">
         <div class="col-xs-12 col-md-offset-1 col-md-2">
@@ -37,11 +39,13 @@
         </div>
       </div>
     </div>
+    <!----Map------>
     <div class="row map-row">
       <div class="col-xs-12  map-div">
         <div id="map"></div>
       </div>
     </div>
+    <!----Key------>
     <div class="row row-key">
       <div class="col-md-2 col-sm-12 key">
         <h1>Key</h1>
@@ -62,6 +66,7 @@
   </div>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script>
+  // Show key when button clicked
     $('button').one('click', function() {
       $('.key').show();
       $('.mobile-header > h1').remove();
@@ -69,6 +74,7 @@
   </script>
   <script>
     //map js
+    // London coordinates
     function londonFunction() {
 
       document.getElementById("cityChosen").innerHTML = "Welcome to London";
@@ -96,7 +102,8 @@
       initMap(londonAttractions, londonHotels, londonBarsRestaurants);
 
     }
-
+    
+    // Paris coordinates
     function parisFunction() {
 
       document.getElementById("cityChosen").innerHTML = "Bienvenue à Paris";
@@ -127,7 +134,8 @@
       initMap(parisAttractions, parisHotels, parisBarsRestaurants);
 
     }
-
+    
+    // Rome coordinates
     function romeFunction() {
 
       document.getElementById("cityChosen").innerHTML = "Benvenuti a Roma";
@@ -159,7 +167,7 @@
 
     }
 
-
+    // Berlin coordinates
     function berlinFunction() {
 
       document.getElementById("cityChosen").innerHTML = "Willkommen in Berlin";
@@ -190,7 +198,8 @@
 
       initMap(berlinAttractions, berlinHotels, berlinBarsRestaurants);
     }
-
+    
+    // Amsterdam coordinates
     function amsterdamFunction() {
 
       document.getElementById("cityChosen").innerHTML = "Welkom in Amsterdam";
@@ -223,19 +232,19 @@
     }
 
 
-
+    
     function initMap(attractions, hotels, barsRestaurants) {
-
+      
+      // center map
       var map = new google.maps.Map(document.getElementById("map"), {
         zoom: 12,
         center: attractions[0]
 
 
       });
-
+      
+      // attractions with markers
       attractions.map(function(attraction, i) {
-        console.log(attraction["content"]);
-
         var infoWindow = new google.maps.InfoWindow({
           content: "<h4>" + attraction["content"] + "</h4>"
         });
@@ -257,7 +266,7 @@
       });
 
 
-
+      // hotels with markers
       hotels.map(function(hotel, i) {
 
         var infoWindow = new google.maps.InfoWindow({
@@ -279,11 +288,12 @@
         });
 
       });
-
+      
+      // Bars and restaurants with markers
       barsRestaurants.map(function(barsRestaurant, i) {
 
         var infoWindow = new google.maps.InfoWindow({
-          content: "<h4><a href=" + barsRestaurant["url"] + " target=blank_>" + barsRestaurant["content"] + "</a></h4>"
+          content: "<h4><a href=" + barsRestaurant["url"] + " target=_blank>" + barsRestaurant["content"] + "</a></h4>"
         });
 
         var lat = barsRestaurant["lat"];
